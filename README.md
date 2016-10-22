@@ -8,9 +8,10 @@ Follow us on Twitter at [@gtarobotics](https://twitter.com/gtarobotics)
 
 #Install docker and nvidia_docker and CUDA
 
-The recommended platform is Ubuntu 16.04 host and Docker guest.
+The recommended platform is Ubuntu 16.04 host and [Docker for Linux](https://docs.docker.com/engine/installation/linux/ubuntulinux/).
+If you have an NVidia GPU with CUDA compute level >= 3, make sure you install [nvidia_docker](https://github.com/NVIDIA/nvidia-docker) also.
 
-On Mac or Windows install Docker for Mac or Windows
+On Mac or Windows install [Docker for Mac](https://docs.docker.com/docker-for-mac/) or [Docker for Windows](https://docs.docker.com/engine/installation/windows/)
 
 The instructions bellow should work on Mac also (at least the CPU mode).
 
@@ -29,7 +30,7 @@ Execute these commands in the host OS (Ubuntu and OSX):
 #Run SDC Docker image
 
 Here you can see more details about this docker image:
-	[Docker instance with Tensorflow GPU, Keras, Theano, Jupyter Notebook, ROS Indigo and Autoware and more](https://hub.docker.com/r/gtarobotics/udacity-sdc/)
+	[Docker instance with Tensorflow GPU, Keras, Caffe, Torch, Jupyter Notebook, ROS Indigo and Autoware and more](https://hub.docker.com/r/gtarobotics/udacity-sdc/)
 
 In GPU mode:
 
