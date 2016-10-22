@@ -9,6 +9,7 @@ Follow us on Twitter at [@gtarobotics](https://twitter.com/gtarobotics)
 #Install docker and nvidia_docker and CUDA
 
 The recommended platform is Ubuntu 16.04 host and [Docker for Linux](https://docs.docker.com/engine/installation/linux/ubuntulinux/).
+
 If you have an NVidia GPU with CUDA compute level >= 3, make sure you install [nvidia_docker](https://github.com/NVIDIA/nvidia-docker) also.
 
 On Mac or Windows install [Docker for Mac](https://docs.docker.com/docker-for-mac/) or [Docker for Windows](https://docs.docker.com/engine/installation/windows/)
@@ -74,7 +75,6 @@ or just:
 
 	rosbag play *.bag
 
-
 #go back to first terminal and run the viewer
 
 	cd /sharefolder/self-driving-car
@@ -105,4 +105,3 @@ I ran the benchmark on a Spot instance with one Nvidia K80, up to $0.90 per hour
 On my Nvidia 980ti based desktop I get:
 
 	Step 1000 (epoch 1.16), 5.7 ms 
-
