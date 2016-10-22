@@ -24,7 +24,7 @@ or CPU mode:
 
 	./run_quick_benchmark.sh
 
-Please post the results on nd013.slack.com team in #environment channel.
+Please post the results on https://nd013.slack.com team in #environment channel.
 
 #open 2 new terminals in host OS
 
