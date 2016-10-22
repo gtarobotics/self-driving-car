@@ -3,7 +3,9 @@
 
 The challenges are available here:
 
-	https://www.udacity.com/self-driving-car 
+	[An Open Source Self-Driving Car](https://www.udacity.com/self-driving-car)
+
+Follow us on Twitter at [@gtarobotics](https://twitter.com/gtarobotics)
 
 #Install docker and nvidia_docker and CUDA
 
@@ -13,9 +15,9 @@ On Mac or Windows install Docker for Mac or Windows
 
 The instructions bellow should work on Mac also (at least the CPU mode).
 
-For Amazon AWS EC2 see [Amazon AWS EC2 AMI with gtarobotics/udacity-sdc image installed](#AWS) 
+For Amazon AWS EC2 see [Amazon AWS EC2 AMI with gtarobotics/udacity-sdc image](#Amazon AWS EC2 AMI with gtarobotics/udacity-sdc image installed) 
 
-#Get the SDC environment ready
+#Get the SDC host development environment ready
 
 Execute these commands in the host OS (Ubuntu and OSX):
 	
@@ -39,7 +41,7 @@ or CPU mode:
 
 	./run_quick_benchmark.sh
 
-Please post the results on https://nd013.slack.com team in #environment channel.
+Please post the results on [ND013 Slack Team](https://nd013.udacity.com/) in #environment channel.
 
 #open 2 new terminals in host OS
 
@@ -79,8 +81,7 @@ You should see the 3 cameras in the view like in the screenshot:
 
 	sdc_rosbag_viewer-in-action.png
 
-## AWS
-#Amazon AWS EC2 AMI with gtarobotics/udacity-sdc image installed
+# Amazon AWS EC2 AMI with gtarobotics/udacity-sdc image installed
 
 The image id is: ami-0267c362
 
