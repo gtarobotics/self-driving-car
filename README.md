@@ -1,12 +1,12 @@
 
-#Instructions on how to get your development environment ready for Udacity Self Driving Car (SDC) Challenges
+# Instructions on how to get your development environment ready for Udacity Self Driving Car (SDC) Challenges
 
 The challenges are available here:
 	[An Open Source Self-Driving Car](https://www.udacity.com/self-driving-car)
 
 Follow us on Twitter at [@gtarobotics](https://twitter.com/gtarobotics)
 
-#Install docker and nvidia_docker and CUDA
+# Install docker and nvidia_docker and CUDA
 
 The recommended platform is Ubuntu 16.04 host and [Docker for Linux](https://docs.docker.com/engine/installation/linux/ubuntulinux/).
 
@@ -18,7 +18,7 @@ The instructions bellow should work on Mac also (at least the CPU mode).
 
 For Amazon AWS EC2 see [Amazon AWS EC2 AMI with gtarobotics/udacity-sdc image](#amazon-aws-ec2-ami-with-gtaroboticsudacity-sdc-image-installed) 
 
-#Get the SDC host development environment ready
+# Get the SDC host development environment ready
 
 Execute these commands in the host OS (Ubuntu and OSX):
 	
@@ -28,7 +28,7 @@ Execute these commands in the host OS (Ubuntu and OSX):
 	cd self-driving-car
 	chmod 755 *.sh
 
-#Run SDC Docker image
+# Run SDC Docker image
 
 Here you can see more details about this docker image:
 	[Docker instance with Tensorflow GPU, Keras, Caffe, Torch, Jupyter Notebook, ROS Indigo and Autoware and more](https://hub.docker.com/r/gtarobotics/udacity-sdc/)
@@ -41,33 +41,35 @@ or CPU mode:
 
 	./run_nvidia_docker-sdc-ros-cpu.sh
 
-#Once in the container try to test the performance
+# Once in the container try to test the performance
 
 	./run_quick_benchmark.sh
 
 Please post the results on [ND013 Slack Team](https://nd013.udacity.com/) in #environment channel.
 
-#open 2 new terminals in host OS
+### open 2 new terminals in host OS
 
-#check docker container_id in the first new terminal
+### check docker container_id in the first new terminal
 	
 	sudo docker ps | grep "gtarobotics/udacity-sdc"
 
-#go to terminal 2 and attach to the container and start roscore
+### go to terminal 2 and attach to the container and start roscore
 	
 	attach-docker-container.sh container_id
 	source /opt/ros/indigo/setup.bash
 	roscore 
  
-#go to terminal 3 
+### go to terminal 3 
 
 	attach-docker-container.sh container_id
 
-#change dir to where the Udacity SDC challange rosbag sets are, make sure they are under /sharefolder in the container
+### change dir to where the Udacity SDC challenges rosbag sets are, make sure they are under /sharefolder/sdc-data in the container
+
+The current datasets can be downloaded from here [Udacity SDC GitHub project udacity/self-driving-car](https://github.com/udacity/self-driving-car)  
 
 	cd /sharefolder/sdc-data/600GB-dataset/2016-10-10
 
-#and play all 3 cameras rosbag starting with second 120 (you can change this starting point and it should load pretty fast)
+### and play all 3 cameras rosbag starting with second 120 (you can change this starting point and it should load pretty fast)
 	
 	rosbag play -s 120 udacity-dataset_sensor_camera_left_2016-10-11-13-23-02_0.bag udacity-dataset_sensor_camera_center_2016-10-11-13-23-02_0.bag udacity-dataset_sensor_camera_right_2016-10-11-13-23-02_0.bag
 
@@ -75,7 +77,7 @@ or just:
 
 	rosbag play *.bag
 
-#go back to first terminal and run the viewer
+### go back to first terminal and run the viewer
 
 	cd /sharefolder/self-driving-car
 	python2 sdc_rosbag_viewer.py
