@@ -65,3 +65,24 @@ or just:
 You should see the 3 cameras in the view like in the screenshot:
 
 	sdc_rosbag_viewer-in-action.png
+
+#Amazon AWS EC2 AMI with gtarobotics/udacity-sdc image installed
+
+The image id is: ami-0267c362
+
+Launch at least a p2-xlarge instance (one K80 GPU)
+
+Once in the EC2 instance shell you can run the quick benchmark like this: 
+	./run_gtarobotics_udacity_sdc_docker_image.sh ./run_quick_benchmark.sh
+
+Or to get into the container shell using this: 
+	./run_gtarobotics_udacity_sdc_docker_image.sh
+
+I ran the benchmark on a Spot instance with one Nvidia K80, up to $0.90 per hour and I got this performance:
+
+	Step 1000 (epoch 1.16), 12.3 ms
+
+On my Nvidia 980ti based desktop I get:
+
+	Step 1000 (epoch 1.16), 5.7 ms 
+
