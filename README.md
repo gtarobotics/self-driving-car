@@ -34,60 +34,47 @@ Here you can see more details about this docker image:
 	[Docker instance with Tensorflow GPU, Keras, Caffe, Torch, Jupyter Notebook, ROS Indigo and Autoware and more](https://hub.docker.com/r/gtarobotics/udacity-sdc/)
 
 In GPU mode:
-
 	./run_nvidia_docker-sdc-ros-gpu.sh
 
 or CPU mode:
-
 	./run_nvidia_docker-sdc-ros-cpu.sh
 
 # Once in the container try to test the performance
-
 	./run_quick_benchmark.sh
 
-Please post the results on [ND013 Slack Team](https://nd013.udacity.com/) in #environment channel.
+Please post the [results like this](#quick_benchmark_results) on [ND013 Slack Team](https://nd013.udacity.com/) in #environment channel.
 
 ### open 2 new terminals in host OS
 
-### check docker container_id in the first new terminal
-	
+### check docker container_id in the first new terminal	
 	sudo docker ps | grep "gtarobotics/udacity-sdc"
 
 ### go to terminal 2 and attach to the container and start roscore
-	
 	attach-docker-container.sh container_id
 	source /opt/ros/indigo/setup.bash
 	roscore 
  
-### go to terminal 3 
-
+### go to terminal 3
 	attach-docker-container.sh container_id
 
 ### change dir to where the Udacity SDC challenges rosbag sets are, make sure they are under /sharefolder/sdc-data in the container
-
-The current datasets can be downloaded from here [Udacity SDC GitHub project udacity/self-driving-car](https://github.com/udacity/self-driving-car)  
-
+The current datasets can be downloaded from here [Udacity SDC GitHub project udacity/self-driving-car](https://github.com/udacity/self-driving-car)
 	cd /sharefolder/sdc-data/600GB-dataset/2016-10-10
 
-### and play all 3 cameras rosbag starting with second 120 (you can change this starting point and it should load pretty fast)
-	
+### and play all 3 cameras rosbag starting with second 120 (you can change this starting point and it should load pretty fast)	
 	rosbag play -s 120 udacity-dataset_sensor_camera_left_2016-10-11-13-23-02_0.bag udacity-dataset_sensor_camera_center_2016-10-11-13-23-02_0.bag udacity-dataset_sensor_camera_right_2016-10-11-13-23-02_0.bag
 
 or just:
-
 	rosbag play *.bag
 
 ### go back to first terminal and run the viewer
-
 	cd /sharefolder/self-driving-car
 	python2 sdc_rosbag_viewer.py
 
 You should see the 3 cameras in the view like in the screenshot:
-
 	sdc_rosbag_viewer-in-action.png
 
 # Amazon AWS EC2 AMI with gtarobotics/udacity-sdc image installed
-
 The image id is: ami-0267c362
 
 Launch at least a [p2.xlarge CUDA compute](https://aws.amazon.com/ec2/instance-types/p2/) instance (one K80 GPU)
@@ -100,6 +87,7 @@ Or to get into the container shell use this:
 
 	./run_gtarobotics_udacity_sdc_docker_image.sh
 
+# Quick benchmark results
 I ran the benchmark on a Spot instance with one Nvidia K80, up to $0.90 per hour and I got this performance:
 
 	Step 1000 (epoch 1.16), 12.3 ms
