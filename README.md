@@ -1,5 +1,5 @@
 
-#Instructions on how to your environment ready for Udacity Self Driving Car (SDC) Challenges
+#Instructions on how to get your development environment ready for Udacity Self Driving Car (SDC) Challenges
 
 The challenges are available here:
 
@@ -28,6 +28,10 @@ Execute these commands in the host OS (Ubuntu and OSX):
 	chmod 755 *.sh
 
 #Run SDC Docker image
+
+Here you can see more details about this docker image:
+
+	[Docker instance with Tensorflow GPU, Keras, Theano, Jupyter Notebook, ROS Indigo and Autoware and more](https://hub.docker.com/r/gtarobotics/udacity-sdc/)
 
 In GPU mode:
 
