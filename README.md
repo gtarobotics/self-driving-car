@@ -12,7 +12,7 @@ The recommended platform is Ubuntu 16.04 host and [Docker for Linux](https://doc
 
 If you have an NVidia GPU with CUDA compute level >= 3, make sure you install [nvidia_docker](https://github.com/NVIDIA/nvidia-docker) also.
 
-On Mac or Windows install [Docker for Mac](https://docs.docker.com/docker-for-mac/) or [Docker for Windows](https://docs.docker.com/engine/installation/windows/)
+On Mac install [Docker for Mac](https://docs.docker.com/docker-for-mac/) on Windows [Docker for Windows](https://docs.docker.com/docker-for-windows/)
 
 The instructions bellow should work on Mac also (at least the CPU mode).
 
