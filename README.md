@@ -1,6 +1,7 @@
 #install docker and nvidia_docker and CUDA in Ubuntu 16.04
 
 On Mac or Windows install Docker for Mac or Windows
+
 The instructions bellow should work on Mac also (at least the CPU mode).
 
 #then execute these commands
@@ -9,6 +10,7 @@ The instructions bellow should work on Mac also (at least the CPU mode).
 	cd ~/sharefolder/
 	git pull https://github.com/gtarobotics/self-driving-car
 	cd self-driving-car
+	chmod 755 *.sh
 
 #run SDC Docker image
 
