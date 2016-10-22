@@ -15,7 +15,7 @@ On Mac or Windows install Docker for Mac or Windows
 
 The instructions bellow should work on Mac also (at least the CPU mode).
 
-For Amazon AWS EC2 see [Amazon AWS EC2 AMI with gtarobotics/udacity-sdc image](#Amazon AWS EC2 AMI with gtarobotics/udacity-sdc image installed) 
+For Amazon AWS EC2 see [Amazon AWS EC2 AMI with gtarobotics/udacity-sdc image](#amazon-aws-ec2-ami-with-gtaroboticsudacity-sdc-image-installed) 
 
 #Get the SDC host development environment ready
 
