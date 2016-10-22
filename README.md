@@ -1,10 +1,23 @@
-#install docker and nvidia_docker and CUDA in Ubuntu 16.04
+
+#Instructions on how to your environment ready for Udacity Self Driving Car (SDC) Challenges
+
+The challenges are available here:
+
+	https://www.udacity.com/self-driving-car 
+
+#Install docker and nvidia_docker and CUDA
+
+The recommended platform is Ubuntu 16.04 host and Docker guest.
 
 On Mac or Windows install Docker for Mac or Windows
 
 The instructions bellow should work on Mac also (at least the CPU mode).
 
-#then execute these commands
+For Amazon AWS EC2 see [Amazon AWS EC2 AMI with gtarobotics/udacity-sdc image installed](#AWS) 
+
+#Get the SDC environment ready
+
+Execute these commands in the host OS (Ubuntu and OSX):
 	
 	mkdir ~/sharefolder
 	cd ~/sharefolder/
@@ -12,7 +25,7 @@ The instructions bellow should work on Mac also (at least the CPU mode).
 	cd self-driving-car
 	chmod 755 *.sh
 
-#run SDC Docker image
+#Run SDC Docker image
 
 In GPU mode:
 
@@ -66,6 +79,7 @@ You should see the 3 cameras in the view like in the screenshot:
 
 	sdc_rosbag_viewer-in-action.png
 
+## AWS
 #Amazon AWS EC2 AMI with gtarobotics/udacity-sdc image installed
 
 The image id is: ami-0267c362
