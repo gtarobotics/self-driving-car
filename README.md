@@ -1,5 +1,8 @@
 #install docker and nvidia_docker and CUDA in Ubuntu 16.04
 
+On Mac or Windows install Docker for Mac or Windows
+The instructions bellow should work on Mac also (at least the CPU mode).
+
 #then execute these commands
 	
 	mkdir ~/sharefolder
@@ -7,9 +10,21 @@
 	git pull https://github.com/gtarobotics/self-driving-car
 	cd self-driving-car
 
-#run SDC GPU Docker image
+#run SDC Docker image
+
+In GPU mode:
 
 	./run_nvidia_docker-sdc-ros-gpu.sh
+
+or CPU mode:
+
+	./run_nvidia_docker-sdc-ros-cpu.sh
+
+#Once in the container try to test the performance
+
+	./run_quick_benchmark.sh
+
+Please post the results on nd013.slack.com team in #environment channel.
 
 #open 2 new terminals in host OS
 
@@ -27,13 +42,18 @@
 
 	attach-docker-container.sh container_id
 
-#change dir to where the rosbag challange set 2 are
+#change dir to where the Udacity SDC challange rosbag sets are, make sure they are under /sharefolder in the container
 
 	cd /sharefolder/sdc-data/600GB-dataset/2016-10-10
 
 #and play all 3 cameras rosbag starting with second 120 (you can change this starting point and it should load pretty fast)
 	
 	rosbag play -s 120 udacity-dataset_sensor_camera_left_2016-10-11-13-23-02_0.bag udacity-dataset_sensor_camera_center_2016-10-11-13-23-02_0.bag udacity-dataset_sensor_camera_right_2016-10-11-13-23-02_0.bag
+
+or just:
+
+	rosbag play *.bag
+
 
 #go back to first terminal and run the viewer
 
