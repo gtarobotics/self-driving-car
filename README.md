@@ -89,7 +89,7 @@ You should see the 3 cameras in the view like in the screenshot:
 
 The image id is: ami-0267c362
 
-Launch at least a p2-xlarge instance (one K80 GPU)
+Launch at least a [p2.xlarge CUDA compute](https://aws.amazon.com/ec2/instance-types/p2/) instance (one K80 GPU)
 
 Once in the EC2 instance shell you can run the quick benchmark like this:
 
