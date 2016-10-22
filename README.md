@@ -24,7 +24,7 @@ Execute these commands in the host OS (Ubuntu and OSX):
 	
 	mkdir ~/sharefolder
 	cd ~/sharefolder/
-	git pull https://github.com/gtarobotics/self-driving-car
+	git clone https://github.com/gtarobotics/self-driving-car
 	cd self-driving-car
 	chmod 755 *.sh
 
