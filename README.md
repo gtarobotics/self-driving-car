@@ -42,7 +42,7 @@ or CPU mode:
 # Once in the container try to test the performance
 	./run_quick_benchmark.sh
 
-Please post the [results like this](#quick_benchmark_results) on [ND013 Slack Team](https://nd013.udacity.com/) in #environment channel.
+Please post the [results like this](#quick-benchmark-results) on [ND013 Slack Team](https://nd013.udacity.com/) in #environment channel.
 
 ### open 2 new terminals in host OS
 
