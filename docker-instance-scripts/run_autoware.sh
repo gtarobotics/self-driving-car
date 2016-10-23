@@ -1,0 +1,2 @@
+cd Autoware/ros
+./run
