@@ -58,6 +58,14 @@ Please post the [results like this](#quick-benchmark-results) on [ND013 Slack Te
 
 See some results from contributors local machines and AWS here [benchmarks_results](./benchmarks_results)
 
+To test OpenCV do this:
+
+	cd /sharefolder/
+	curl https://archive.org/download/NASA_Launchpad_MSL_HD/NASA_Launchpad_MSL_HD.mp4 -o NASA_Launchpad_MSL_HD.mp4 -L
+	python3 ~/test_opencv.py -v NASA_Launchpad_MSL_HD.mp4
+
+It should play (fast) the video in grayscale, resized to width 640.
+
 # View datasets, works for now only on local computer, I'll add instructions on how to do it on AWS later
 
 ### open 2 new terminals in host OS
