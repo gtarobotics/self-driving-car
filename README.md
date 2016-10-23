@@ -46,6 +46,7 @@ First update the scripts to latest version from GitHub
 	nvcc -V #to check the CUDA version
 
 CUDA version can be switched with:
+
 	switch_to_CUDA-7.5.sh
 	switch_to_CUDA-8.0.sh
 
