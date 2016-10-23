@@ -41,8 +41,11 @@ or CPU mode:
 
 # Once in the container
 First update the scripts to latest version from GitHub
+
 	./update_scripts.sh
+
 And run a performance test, this will also confirm that env (CPU/GPU) is working
+
 	./run_quick_benchmark.sh
 
 Please post the [results like this](#quick-benchmark-results) on [ND013 Slack Team](https://nd013.udacity.com/) in [#benchmarks](https://nd013.slack.com/messages/benchmarks) channel.
