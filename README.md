@@ -85,7 +85,7 @@ Once in the EC2 instance shell you can run the quick benchmark like this:
 
 	./run_gtarobotics_udacity_sdc_docker_image.sh ./run_quick_benchmark.sh
 
-Or to get into the container shell use this:
+Or to start a Docker container shell use this just this:
 
 	./run_gtarobotics_udacity_sdc_docker_image.sh
 
