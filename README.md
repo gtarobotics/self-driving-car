@@ -44,6 +44,8 @@ or CPU mode:
 
 Please post the [results like this](#quick-benchmark-results) on [ND013 Slack Team](https://nd013.udacity.com/) in [#benchmarks](https://nd013.slack.com/messages/benchmarks) channel.
 
+See some results from contributors local machines and AWS here [benchmarks_results](./benchmarks_results)
+
 # View datasets, works for now only on local computer, I'll add instructions on how to do it on AWS later
 
 ### open 2 new terminals in host OS
