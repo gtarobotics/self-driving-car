@@ -92,7 +92,7 @@ You should see the 3 cameras in the view like in the screenshot:
 	sdc_rosbag_viewer-in-action.png
 
 # Amazon AWS EC2 AMI with gtarobotics/udacity-sdc image installed
-The image id is: ami-0267c362
+The image id is: ami-0267c362 and it is available only in US West (Oregon) region
 
 Launch at least a [p2.xlarge CUDA compute](https://aws.amazon.com/ec2/instance-types/p2/) instance (one K80 GPU)
 
