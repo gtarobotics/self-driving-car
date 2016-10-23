@@ -43,8 +43,15 @@ or CPU mode:
 First update the scripts to latest version from GitHub
 
 	./update_scripts.sh
+	nvcc -V #to check the CUDA version
 
-And run a performance test, this will also confirm that env (CPU/GPU) is working
+CUDA version can be switch with:
+
+	switch_to_CUDA-7.5.sh
+
+	switch_to_CUDA-8.0.sh
+
+Then run a performance test, this will also confirm that env (CPU/GPU) is working
 
 	./run_quick_benchmark.sh
 
