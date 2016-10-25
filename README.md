@@ -42,7 +42,7 @@ or CPU mode:
 
 On Mac OSX run this script instead (provided by ND013@tantony):
 
-	./run_docker_sdc_ros_cpu-on-OSX.sh
+	./run_docker_sdc_ros_cpu-on-OSX.sh (change en1 with en0 if it doesn't work)
 
 # Once in the container
 First update the scripts to latest version from GitHub
