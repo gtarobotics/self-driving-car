@@ -15,6 +15,7 @@ If you have an NVidia GPU with CUDA compute level >= 3, make sure you install [n
 On Mac install [Docker for Mac](https://docs.docker.com/docker-for-mac/) on Windows [Docker for Windows](https://docs.docker.com/docker-for-windows/)
 
 The instructions bellow should work on Mac also (at least the CPU mode, see specific script to start the docker image bellow).
+For Mac see also [Docker for Mac and GUI applications](https://fredrikaverpil.github.io/2016/07/31/docker-for-mac-and-gui-applications/).
 
 For Amazon AWS EC2 see [Amazon AWS EC2 AMI with gtarobotics/udacity-sdc image](#amazon-aws-ec2-ami-with-gtaroboticsudacity-sdc-image-installed) 
 
