@@ -14,7 +14,7 @@ If you have an NVidia GPU with CUDA compute level >= 3, make sure you install [n
 
 On Mac install [Docker for Mac](https://docs.docker.com/docker-for-mac/) on Windows [Docker for Windows](https://docs.docker.com/docker-for-windows/)
 
-The instructions bellow should work on Mac also (at least the CPU mode).
+The instructions bellow should work on Mac also (at least the CPU mode, see specific script to start the docker image bellow).
 
 For Amazon AWS EC2 see [Amazon AWS EC2 AMI with gtarobotics/udacity-sdc image](#amazon-aws-ec2-ami-with-gtaroboticsudacity-sdc-image-installed) 
 
@@ -38,6 +38,10 @@ In GPU mode:
 
 or CPU mode:
 	./run_nvidia_docker-sdc-ros-cpu.sh
+
+On Mac OSX run this script instead (provided by ND013@tantony):
+
+	./run_docker_sdc_ros_cpu-on-OSX.sh
 
 # Once in the container
 First update the scripts to latest version from GitHub
