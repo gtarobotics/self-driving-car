@@ -105,12 +105,12 @@ You should see the 3 cameras in the view like in the screenshot:
 	sdc_rosbag_viewer-in-action.png
 
 # Amazon AWS EC2 AMI with gtarobotics/udacity-sdc image installed
-The images are available in  available only in US West (Oregon) region, their ids are:
+The images are available only in US West (Oregon) region, their ids are (search for "gta robotics" in community AMIs):
  
 	GTA Robotics - Udacity Open Source Self Driving Car Challanges - Docker GPU/CPU image - ami-0267c362 (older docker imgage version, I'll remove this in the future)
 	GTA Robotics - Udacity Open Source Self Driving Car Challenges - Docker GPU/CPU Cuda 7.5/8.0 image - ami-7d28e8f1d (latest docker image, also Tensorflow can be uesd in VM directoy)
 
-Aalways check the list above for updated AMIs, when new AMIs are added the old ones will be removed!
+Always check the list above for updated AMIs, when new AMIs are added the old ones will be removed!
 The best way to find them on AWS is to search for "gta robotics" in the community AMIs in us-west-2 zone.
 
 Launch at least a [p2.xlarge CUDA compute](https://aws.amazon.com/ec2/instance-types/p2/) instance (one K80 GPU)
