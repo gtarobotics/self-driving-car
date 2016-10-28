@@ -1,4 +1,5 @@
 
+
 # Instructions on how to get your development environment ready for Udacity Self Driving Car (SDC) Challenges
 
 The challenges are available here:
@@ -42,7 +43,7 @@ or CPU mode:
 
 On Mac OSX run this script instead (provided by ND013@tantony):
 
-	./run_docker_sdc_ros_cpu-on-OSX.sh (change en1 with en0 if it doesn't work)
+	./run_docker_sdc_ros_cpu-on-OSX.sh (change en1 with en0 if it doesn't work, also check the ND013 #environment channel for other solutions for multimonitor setups)
 
 # Once in the container
 First update the scripts to latest version from GitHub
@@ -104,7 +105,13 @@ You should see the 3 cameras in the view like in the screenshot:
 	sdc_rosbag_viewer-in-action.png
 
 # Amazon AWS EC2 AMI with gtarobotics/udacity-sdc image installed
-The image id is: ami-0267c362 and it is available only in US West (Oregon) region
+The images are available in  available only in US West (Oregon) region, their ids are:
+ 
+ GTA Robotics - Udacity Open Source Self Driving Car Challanges - Docker GPU/CPU image - ami-0267c362 (older docker imgage version, I'll remove this in the future)
+ GTA Robotics - Udacity Open Source Self Driving Car Challenges - Docker GPU/CPU Cuda 7.5/8.0 image - ami-7d28e8f1d (latest docker image, also Tensorflow can be uesd in VM directoy)
+
+Aalways check the list above for updated AMIs, when new AMIs are added the old ones will be removed!
+The best way to find them on AWS is to search for "gta robotics" in the community AMIs in us-west-2 zone.
 
 Launch at least a [p2.xlarge CUDA compute](https://aws.amazon.com/ec2/instance-types/p2/) instance (one K80 GPU)
 
@@ -117,10 +124,35 @@ Or to start a Docker container shell use this just this:
 	./run_gtarobotics_udacity_sdc_docker_image.sh
 
 # Quick benchmark results
-I ran the benchmark on a Spot instance with one Nvidia K80, up to $0.90 per hour and I got this performance:
+I ran the benchmark on a Spot instance (p2.xlarge) with one Nvidia K80, up to $0.90 per hour and I got this performance:
 
 	Step 1000 (epoch 1.16), 12.3 ms
 
-On my Nvidia 980ti based desktop I get:
+On my Nvidia 980TI based desktop I get:
 
-	Step 1000 (epoch 1.16), 5.7 ms 
+	Step 1000 (epoch 1.16), 5.2 ms 
+
+The Nvidia Autopilot test was a bit faster on p2.xlarge vs a 980TI based desktop, both running the same docker (gtarobotics/udacity-sdc) instance:
+
+	gtarobotics/udacity-sdc docker instance on AWS EC2 p2.xlarge VM (Ubuntu 14.04 as host):
+
+		root@f62afc086a85:~/sharefolder/Nvidia-Autopilot-TensorFlow# time python3 train.py
+
+		Model saved in file: ./save/model.ckpt
+		step 13610, val loss 0.0172059
+		step 13620, val loss 0.00907515
+
+		real	87m15.149s
+		user	80m31.441s
+		sys		4m4.473s
+
+	gtarobotics/udacity-sdc docker instance on Nvidia 980TI (Ubuntu 16.04 as host):
+
+		root@48ae719d1e3b:~/sharefolder/Nvidia-Autopilot-TensorFlow# time python3 train.py
+		
+		Model saved in file: ./save/model.ckpt
+		step 13610, val loss 0.0117589
+		step 13620, val loss 0.0108083
+		real    95m36.718s
+		user    53m38.324s
+		sys     3m10.360s
