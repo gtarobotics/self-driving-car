@@ -107,8 +107,8 @@ You should see the 3 cameras in the view like in the screenshot:
 # Amazon AWS EC2 AMI with gtarobotics/udacity-sdc image installed
 The images are available in  available only in US West (Oregon) region, their ids are:
  
- GTA Robotics - Udacity Open Source Self Driving Car Challanges - Docker GPU/CPU image - ami-0267c362 (older docker imgage version, I'll remove this in the future)
- GTA Robotics - Udacity Open Source Self Driving Car Challenges - Docker GPU/CPU Cuda 7.5/8.0 image - ami-7d28e8f1d (latest docker image, also Tensorflow can be uesd in VM directoy)
+	GTA Robotics - Udacity Open Source Self Driving Car Challanges - Docker GPU/CPU image - ami-0267c362 (older docker imgage version, I'll remove this in the future)
+	GTA Robotics - Udacity Open Source Self Driving Car Challenges - Docker GPU/CPU Cuda 7.5/8.0 image - ami-7d28e8f1d (latest docker image, also Tensorflow can be uesd in VM directoy)
 
 Aalways check the list above for updated AMIs, when new AMIs are added the old ones will be removed!
 The best way to find them on AWS is to search for "gta robotics" in the community AMIs in us-west-2 zone.
