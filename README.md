@@ -132,6 +132,7 @@ On my Nvidia 980TI based desktop I get:
 
 	Step 1000 (epoch 1.16), 5.2 ms 
 
+# Long benchmark results
 The Nvidia Autopilot test was a bit faster on p2.xlarge vs a 980TI based desktop, both running the same docker (gtarobotics/udacity-sdc) instance:
 
 	gtarobotics/udacity-sdc docker instance on AWS EC2 p2.xlarge VM (Ubuntu 14.04 as host):
