@@ -365,6 +365,9 @@ try:
 
             #uncomment pygame.image.save line to save the proceessed images and later create a video like this:
             #https://www.youtube.com/watch?v=1vQJ_ssuEBg
+            #Then run the following in a gtrarobotics/udacity-sdc:vnc docker image container
+            #~/sharefolder/sdc/sdc-data/Train/0/capture# ls -1 | sort -n | awk 'BEGIN{i=0} {printf("ln -s %s img%04d.tga\n",$1,i);i++}' | sh
+            #~/sharefolder/sdc/sdc-data/Train/0/capture# ffmpeg -r 25 -i img%04d.tga -c:v libx264 -vf fps=25 -pix_fmt yuv420p out.mp4
             #pygame.image.save(screen, traininSetFolder+'capture/'+imageName)
             pygame.display.flip()
 
