@@ -4,8 +4,8 @@ import argparse
 import imutils
 
 
-procWidth = 640   # processing width (x resolution) of frame
-procHeight = 480
+procWidth = 1280   # processing width (x resolution) of frame
+procHeight = 720
 
 # construct the argument parser and parse the arguments
 ap = argparse.ArgumentParser()
@@ -78,12 +78,6 @@ x2=1920
 y2=1080-320
 #read first frame, it will be skipped
 ret, imgL = camera.read()
-'''
-cv2.imshow('left',imgL)
-key = cv2.waitKey(1)
-while(key & 0xFF != ord('q')):
-    key = cv2.waitKey(1)
-'''
 cv2.rectangle(imgL,(x1,y1), (x2,y2),(0,0,255))   
 imgL = imgL[y1:y2, x1:x2]
 imgL = imutils.resize(imgL, width=procWidth)
@@ -166,6 +160,14 @@ while(True):
 
     #print("Lcount %d Rcount %d Delta %d " % imgLCnt,imgLCnt,imgLCnt-imgRCnt)
     #print("Lcount %d Rcount %d Diff %d " % imgLCnt,imgRCnt,imgLCnt-imgRCnt)
+    #'''
+
+    #'''
+    #cv2.imshow('left',imgL)
+    if(imgLCnt==210):
+        key = cv2.waitKey(1)
+        while(key & 0xFF != ord('q')):
+            key = cv2.waitKey(1)
     #'''
 
     key = cv2.waitKey(1)
