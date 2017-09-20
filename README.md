@@ -1,5 +1,5 @@
 
-Join us in building DIY Open Source Self Driving Cars at http://ossdc.org
+## Join us in building DIY Open Source Self Driving Cars at http://ossdc.org
 
 # Instructions on how to get your development environment ready for Udacity Self Driving Car (SDC) Challenges
 
